@@ -1,0 +1,10 @@
+^C:\USERS\PIJEF\DESKTOP\CPLUSPLUS\TP1\BUILD\CMAKEFILES\71FEA82419151AAEB6EC2AED439B20DD\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/pijef/Desktop/cplusplus/tp1 -BC:/Users/pijef/Desktop/cplusplus/tp1/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/pijef/Desktop/cplusplus/tp1/build/MonProjetSFML.slnx
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
