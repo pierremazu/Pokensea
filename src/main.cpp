@@ -1,9 +1,17 @@
-#include <iostream>
-#include <tuple>
 
-int main() {
-    // Syntaxe C++17 (Structured bindings)
-    auto [a, b] = std::make_pair(1, "C++17 fonctionnel !");
-    std::cout << a << ": " << b << std::endl;
+#include "C:/Users/pijef/Desktop/cplusplus/tp1/inc/Pokedex.hpp"
+#include <iostream>
+
+int main(){
+    try{
+        Pokedex& dex = Pokedex::getInstance("..\\pokedex.csv");
+
+        Pokemon p = dex.clonePokemon(25);
+        p.displayInfo();
+    }
+    catch (const std::exception& e){
+        std::cerr << e.what() << std::endl;
+    }
+
     return 0;
 }
