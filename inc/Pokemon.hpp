@@ -1,10 +1,10 @@
-#include <iostream>
-
 #include <string>
 using namespace std;
 
 class Pokemon {
     private : 
+
+        int id;
         string name;
 
         double hitPoint;
@@ -14,30 +14,25 @@ class Pokemon {
 
         int evolution;
 
-        bool ko = false;
-
-        static int numberOfPokemon;
-
     public : 
 
-        int id;
-
-        Pokemon(int id, string name, double maxHitPoint, double hitPoint, double attack, double defense, int evolution);
+        Pokemon(int id, string name, double maxHitPoint, double hitPoint, double attack, double defense, int evolution=0);
 
         ~Pokemon();
         
-        // methode : affichage des infos du pokémon
+        //affichage des informations du pokémon
         void displayInfo() const;
 
-        //int getId() const;
-        //string getName() const;
+        int getId() const;
+
+        string getName() const;
+
+        int getEvolution() const;
+
         double getMaxHitPoint() const;
         double getHitPoint() const;
         double getAttack() const;
         double getDefense() const;
-
-        //int getNumberOfPokemon(); //pas const car s'applique à la classe, pas à l'état de l'objet (on utilise une variable statique)
-        //int getEvolution() const;
 
         //Attaque un autre pokemon
         void atkPokemon(Pokemon& cible);
@@ -46,7 +41,7 @@ class Pokemon {
         void tookDamage(double damage);
 
         //Vérifie et enregistre les KOs
-        bool isKO();
+        bool isKO() const;
         //annonce le KO
         void announceKO();
 };

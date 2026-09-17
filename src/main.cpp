@@ -1,5 +1,5 @@
 
-#include "C:/Users/pijef/Desktop/cplusplus/tp1/inc/Pokedex.hpp"
+#include "../inc/Pokedex.hpp"
 #include <iostream>
 
 int main(){

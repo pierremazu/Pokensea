@@ -1,4 +1,4 @@
-#include "C:/Users/pijef/Desktop/cplusplus/tp1/inc/SetOfPokemon.hpp"
+#include "../inc/SetOfPokemon.hpp"
 
 SetOfPokemon::SetOfPokemon(){}
 

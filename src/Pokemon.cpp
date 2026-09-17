@@ -1,4 +1,4 @@
-#include "C:/Users/pijef/Desktop/cplusplus/tp1/inc/Pokemon.hpp"
+#include "../inc/Pokemon.hpp"
 #include <iostream>
 
 Pokemon::Pokemon(int id, string name, double maxHitPoint, double hitPoint, double attack, double defense, int evolution) : id(id),name(name),maxHitPoint(maxHitPoint),hitPoint(hitPoint),attack(attack),defense(defense),evolution(evolution){
